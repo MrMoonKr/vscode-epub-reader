@@ -1,10 +1,10 @@
-import * as Open from 'open';
+//import * as Open from 'open';
 import * as Fs from 'fs';
 import * as Path from 'path';
 import { Uri } from 'vscode';
 
 export const open = (path: string) => {
-  return Open(path, { wait: true });
+  //return Open.default(path, { wait: true });
 };
 
 export const mkdir = (path: string) =>{

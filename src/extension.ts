@@ -25,7 +25,7 @@ import {
 } from './commands';
 
 export async function activate(context: ExtensionContext): Promise<void> {
-  console.log('activate');
+    console.log( '[epub][info] activate() called !!!' );
   // store
   store.extensionPath = context.extensionPath;
   store.booksPath = Path.join(context.extensionPath, 'book');
@@ -140,5 +140,5 @@ export async function activate(context: ExtensionContext): Promise<void> {
 }
 
 export function deactivate() {
-  console.log('eactivate.');
+    console.log('[epub][info] deactivate() called !!!');
 }

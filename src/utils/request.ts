@@ -1,4 +1,5 @@
-import got, { Agents } from 'got';
+//import * as got, { Agents } from 'got';
+import * as got from 'got';
 import * as tough from 'tough-cookie';
 import { HttpProxyAgent, HttpsProxyAgent } from 'hpagent';
 import workspaceConfiguration from './workspaceConfiguration';
@@ -11,7 +12,7 @@ interface cookiesConfig {
 
 class Requset {
   cookieJar: tough.CookieJar;
-  agent: Agents | undefined;
+  //agent: got.AgentOptions | undefined;
 
   constructor() {
     this.cookieJar = new tough.CookieJar();
@@ -20,14 +21,14 @@ class Requset {
   }
 
   setAgent(proxy: string) {
-    this.agent = {
-      http: new HttpProxyAgent({
-        proxy
-      }),
-      https: new HttpsProxyAgent({
-        proxy
-      })
-    };
+    // this.agent = {
+    //   http: new HttpProxyAgent({
+    //     proxy
+    //   }),
+    //   https: new HttpsProxyAgent({
+    //     proxy
+    //   })
+    // };
   }
 
   reLoadCookie() {
@@ -55,7 +56,7 @@ class Requset {
     const res = await got({
       ...requestOptions,
       cookieJar: this.cookieJar,
-      agent: this.agent
+      //agent: this.agent
     }).catch((e) => {
       showWarningMessage('网络错误: ' + e.message);
       throw e;

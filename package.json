@@ -92,7 +92,7 @@
       "activitybar": [
         {
           "id": "treeView",
-          "title": "小说",
+          "title": "epub",
           "icon": "static/images/icon.svg"
         }
       ]
@@ -101,7 +101,7 @@
       "treeView": [
         {
           "id": "z-reader-menu",
-          "name": "目录"
+          "name": "Contents(目录)"
         }
       ]
     },
@@ -248,29 +248,20 @@
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-    "@types/glob": "^7.1.1",
-    "@types/got": "^9.6.9",
-    "@types/mocha": "^5.2.6",
-    "@types/node": "^10.12.21",
-    "@types/vscode": "^1.39.0",
-    "@typescript-eslint/eslint-plugin": "^3.0.2",
-    "@typescript-eslint/parser": "^3.0.2",
-    "eslint": "^7.1.0",
-    "eslint-config-prettier": "^8.3.0",
-    "glob": "^7.1.4",
-    "mocha": "^6.1.4",
-    "tslint": "^5.12.1",
-    "typescript": "^4.3.5",
-    "vscode-test": "^1.2.0"
-  },
-  "dependencies": {
-    "cheerio": "^1.0.0-rc.3",
-    "epub": "^1.2.0",
-    "got": "^11.8.5",
-    "hpagent": "^0.1.2",
-    "iconv-lite": "^0.5.0",
-    "open": "^7.0.0",
-    "tough-cookie": "^4.0.0",
-    "tslib": "^2.3.0"
+    "@types/glob": "^8.1.0",
+    "@types/got": "^9.6.12",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "^20.10.0",
+    "@types/vscode": "^1.91.0",
+    "cheerio": "^1.0.0-rc.12",
+    "epub": "^1.2.1",
+    "got": "^14.4.1",
+    "hpagent": "^1.2.0",
+    "iconv-lite": "^0.6.3",
+    "mocha": "^10.6.0",
+    "open": "^10.1.0",
+    "tough-cookie": "^4.1.4",
+    "typescript": "^5.5.3",
+    "vscode-test": "^1.6.1"
   }
 }

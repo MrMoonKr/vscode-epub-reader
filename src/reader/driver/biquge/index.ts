@@ -45,7 +45,8 @@ class ReaderDriver implements ReaderDriverImplements {
       const $ = cheerio.load(res.body);
       $('#list dd').each(function (i: number, elem: any) {
         const name = $(elem).find('a').text();
-        const path = $(elem).find('a').attr().href;
+        //const path = $(elem).find('a').attr().href;
+        const path = $(elem).find('a').attr('href');
         result.push(
           new TreeNode(
             Object.assign({}, defaultTreeNode, {
